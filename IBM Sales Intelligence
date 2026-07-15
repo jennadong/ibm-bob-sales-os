@@ -1,0 +1,75 @@
+npm create vite@latest ibm-bob-sales-os -- --template react2cd ibm-bob-sales-os3npm install
+
+export default function SalesIntelOS(){
+const recoveryAccounts=[
+{name:'CAST & CREW Payroll',value:55586,recovery:82,status:'Executive Reachback',owner:'Jenna Dong'},
+{name:'CoreLogic',value:20239,recovery:65,status:'MQ Assessment',owner:'Jenna Dong'},
+{name:'KKR / Alliant',value:20200,recovery:61,status:'Replacement Use Case',owner:'Jenna Dong'},
+{name:'Pacific Sunwear',value:18540,recovery:35,status:'Transformation Play',owner:'Jenna Dong'},
+{name:'XTRACKS',value:15277,recovery:77,status:'No Response Recovery',owner:'Jenna Dong'},
+{name:'CHLA',value:9339,recovery:58,status:'Budget Review',owner:'Jenna Dong'}
+];
+const total=recoveryAccounts.reduce((a,b)=>a+b.value,0);
+return (<div className='min-h-screen bg-slate-50 p-6'>
+<div className='max-w-7xl mx-auto space-y-6'>
+<div className='rounded-3xl p-8 text-white bg-gradient-to-r from-blue-900 via-indigo-800 to-cyan-700'>
+<h1 className='text-5xl font-bold'>IBM BOB Sales Intelligence OS</h1>
+<p className='mt-2'>Personalized for Jenna Dong • US West Seller</p>
+<p>Manager: Rea Chivi • Skip Manager: Matthew Suarez</p>
+</div>
+<div className='grid md:grid-cols-5 gap-4'>
+<div className='bg-white p-4 rounded-2xl shadow'><div className='text-sm'>Recovery ACV</div><div className='text-3xl font-bold text-red-600'>$139K+</div></div>
+<div className='bg-white p-4 rounded-2xl shadow'><div className='text-sm'>Target Recovery</div><div className='text-3xl font-bold text-green-600'>$35K</div></div>
+<div className='bg-white p-4 rounded-2xl shadow'><div className='text-sm'>Priority Accounts</div><div className='text-3xl font-bold'>6</div></div>
+<div className='bg-white p-4 rounded-2xl shadow'><div className='text-sm'>Executive Escalations</div><div className='text-3xl font-bold'>2</div></div>
+<div className='bg-white p-4 rounded-2xl shadow'><div className='text-sm'>Pipeline Health</div><div className='text-3xl font-bold'>72%</div></div>
+</div>
+<div className='grid lg:grid-cols-3 gap-6'>
+<div className='lg:col-span-2 bg-white rounded-3xl p-6 shadow'>
+<h2 className='text-2xl font-bold mb-4'>Attrition Recovery War Room</h2>
+{recoveryAccounts.map((a,i)=><div key={i} className='border rounded-2xl p-4 mb-3'>
+<div className='flex justify-between'>
+<div><div className='font-bold'>{a.name}</div><div className='text-sm'>Owner: {a.owner}</div></div>
+<div className='text-right'><div className='font-bold text-red-600'>${a.value.toLocaleString()}</div><div>{a.recovery}% Recovery Score</div></div>
+</div>
+<div className='mt-2 bg-slate-100 p-2 rounded-xl'>Next Action: {a.status}</div>
+</div>)}
+</div>
+<div className='bg-white rounded-3xl p-6 shadow'>
+<h2 className='text-xl font-bold'>Today's Action Queue</h2>
+<ul className='mt-4 space-y-2'>
+<li>📧 Reach CAST & CREW stakeholder</li>
+<li>☎ Call XTRACKS reseller</li>
+<li>📊 Build CHLA ROI review</li>
+<li>🤝 Partner sync with CDW</li>
+<li>📄 Refresh recovery quotes</li>
+</ul>
+</div>
+</div>
+<div className='grid md:grid-cols-2 gap-6'>
+<div className='bg-white rounded-3xl p-6 shadow'>
+<h2 className='text-xl font-bold'>AI Outreach Studio</h2>
+<textarea className='w-full h-64 border rounded-2xl p-3 mt-4' defaultValue={'Subject: IBM Renewal Reassessment\n\nHi Contact,\n\nSince our last renewal discussion, we have identified new options that may address the concerns that led to the prior decision. I would welcome a 15-minute discussion to review cost optimization, modernization paths, and current IBM incentives.\n\nRegards,\nJenna Dong'} />
+</div>
+<div className='bg-white rounded-3xl p-6 shadow'>
+<h2 className='text-xl font-bold'>Executive Brief Generator</h2>
+<div className='space-y-3 mt-4'>
+npm install gh-pages --save-dev2npm run deploy
+<div className='p-3 rounded-xl bg-slate-100'>Top Recovery Opportunity: CAST & CREW Payroll</div>
+<div className='p-3 rounded-xl bg-slate-100'>Largest Risk: Lost workload replacement</div>
+<div className='p-3 rounded-xl bg-slate-100'>Recommended Manager Escalation: Rea Chivi</div>
+<div className='p-3 rounded-xl bg-slate-100'>Forecastable Recovery: $35K</div>
+</div>
+</div>
+</div>
+<div className='bg-white rounded-3xl p-6 shadow'>
+<h2 className='text-2xl font-bold'>Account Planning Center</h2>
+<div className='grid md:grid-cols-4 gap-3 mt-4'>
+<button className='p-3 rounded-xl bg-blue-100'>Account 360</button>
+<button className='p-3 rounded-xl bg-green-100'>Renewal Brief</button>
+<button className='p-3 rounded-xl bg-yellow-100'>Recovery Plan</button>
+<button className='p-3 rounded-xl bg-purple-100'>Executive Outreach</button>
+</div>
+</div>
+</div>
+</div>)}
